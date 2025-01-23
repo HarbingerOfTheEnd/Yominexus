@@ -1,7 +1,11 @@
 name: yominexus
-description: "Yominexus is an all-in-one content aggregator inspired by Tachiyomi, Mihon, Aniyomi, and QuickNovel. \n  It provides a seamless reading experience for manga, novels, and anime tracking, allowing users \n  to explore, organize, and enjoy their favorite content from multiple sources in one app. \n  With a customizable interface, offline reading support, and extensive plugin options, \n  Yominexus is your ultimate companion for endless entertainment."
+description: |
+  Yominexus is an all-in-one content aggregator inspired by Tachiyomi, Mihon, Aniyomi, and QuickNovel.
+  It provides a seamless reading experience for manga, novels, and anime tracking, allowing users 
+  to explore, organize, and enjoy their favorite content from multiple sources in one app.
+  With a customizable interface, offline reading support, and extensive plugin options,
+  Yominexus is your ultimate companion for endless entertainment.
 
-# Prevent accidental publishing to pub.dev.
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -24,9 +28,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # Enable generation of localized Strings from arb files.
   generate: true
 
   assets:
-    # Add assets from the images directory to the application.
     - assets/images/
