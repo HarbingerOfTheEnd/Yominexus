@@ -22,57 +22,66 @@ import 'package:shared_preferences/src/shared_preferences_async.dart' as _i2;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
-/// A class which mocks [SharedPreferencesWithCache].
+/// A class which mocks [SharedPreferencesAsync].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSharedPreferencesWithCache extends _i1.Mock
-    implements _i2.SharedPreferencesWithCache {
-  MockSharedPreferencesWithCache() {
+class MockSharedPreferencesAsync extends _i1.Mock
+    implements _i2.SharedPreferencesAsync {
+  MockSharedPreferencesAsync() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  Set<String> get keys =>
-      (super.noSuchMethod(Invocation.getter(#keys), returnValue: <String>{})
-          as Set<String>);
+  _i3.Future<Set<String>> getKeys({Set<String>? allowList}) =>
+      (super.noSuchMethod(
+        Invocation.method(#getKeys, [], {#allowList: allowList}),
+        returnValue: _i3.Future<Set<String>>.value(<String>{}),
+      ) as _i3.Future<Set<String>>);
 
   @override
-  _i3.Future<void> reloadCache() => (super.noSuchMethod(
-        Invocation.method(#reloadCache, []),
-        returnValue: _i3.Future<void>.value(),
-        returnValueForMissingStub: _i3.Future<void>.value(),
-      ) as _i3.Future<void>);
+  _i3.Future<Map<String, Object?>> getAll({Set<String>? allowList}) =>
+      (super.noSuchMethod(
+        Invocation.method(#getAll, [], {#allowList: allowList}),
+        returnValue: _i3.Future<Map<String, Object?>>.value(
+          <String, Object?>{},
+        ),
+      ) as _i3.Future<Map<String, Object?>>);
 
   @override
-  bool containsKey(String? key) => (super.noSuchMethod(
+  _i3.Future<bool?> getBool(String? key) => (super.noSuchMethod(
+        Invocation.method(#getBool, [key]),
+        returnValue: _i3.Future<bool?>.value(),
+      ) as _i3.Future<bool?>);
+
+  @override
+  _i3.Future<int?> getInt(String? key) => (super.noSuchMethod(
+        Invocation.method(#getInt, [key]),
+        returnValue: _i3.Future<int?>.value(),
+      ) as _i3.Future<int?>);
+
+  @override
+  _i3.Future<double?> getDouble(String? key) => (super.noSuchMethod(
+        Invocation.method(#getDouble, [key]),
+        returnValue: _i3.Future<double?>.value(),
+      ) as _i3.Future<double?>);
+
+  @override
+  _i3.Future<String?> getString(String? key) => (super.noSuchMethod(
+        Invocation.method(#getString, [key]),
+        returnValue: _i3.Future<String?>.value(),
+      ) as _i3.Future<String?>);
+
+  @override
+  _i3.Future<List<String>?> getStringList(String? key) => (super.noSuchMethod(
+        Invocation.method(#getStringList, [key]),
+        returnValue: _i3.Future<List<String>?>.value(),
+      ) as _i3.Future<List<String>?>);
+
+  @override
+  _i3.Future<bool> containsKey(String? key) => (super.noSuchMethod(
         Invocation.method(#containsKey, [key]),
-        returnValue: false,
-      ) as bool);
-
-  @override
-  Object? get(String? key) =>
-      (super.noSuchMethod(Invocation.method(#get, [key])) as Object?);
-
-  @override
-  bool? getBool(String? key) =>
-      (super.noSuchMethod(Invocation.method(#getBool, [key])) as bool?);
-
-  @override
-  int? getInt(String? key) =>
-      (super.noSuchMethod(Invocation.method(#getInt, [key])) as int?);
-
-  @override
-  double? getDouble(String? key) =>
-      (super.noSuchMethod(Invocation.method(#getDouble, [key])) as double?);
-
-  @override
-  String? getString(String? key) =>
-      (super.noSuchMethod(Invocation.method(#getString, [key])) as String?);
-
-  @override
-  List<String>? getStringList(String? key) =>
-      (super.noSuchMethod(Invocation.method(#getStringList, [key]))
-          as List<String>?);
+        returnValue: _i3.Future<bool>.value(false),
+      ) as _i3.Future<bool>);
 
   @override
   _i3.Future<void> setBool(String? key, bool? value) => (super.noSuchMethod(
@@ -118,8 +127,8 @@ class MockSharedPreferencesWithCache extends _i1.Mock
       ) as _i3.Future<void>);
 
   @override
-  _i3.Future<void> clear() => (super.noSuchMethod(
-        Invocation.method(#clear, []),
+  _i3.Future<void> clear({Set<String>? allowList}) => (super.noSuchMethod(
+        Invocation.method(#clear, [], {#allowList: allowList}),
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
