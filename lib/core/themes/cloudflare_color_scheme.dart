@@ -3,6 +3,10 @@ import 'package:yominexus/core/themes/base_color_scheme.dart';
 
 @immutable
 final class CloudflareColorScheme extends BaseColorScheme {
+  const CloudflareColorScheme._();
+
+  static const instance = CloudflareColorScheme._();
+
   @override
   ColorScheme get dark => ColorScheme.dark(
         primary: Color(0xFFF38020),

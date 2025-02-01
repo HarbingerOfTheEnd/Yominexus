@@ -3,6 +3,10 @@ import 'package:yominexus/core/themes/base_color_scheme.dart';
 
 @immutable
 final class CottonCandyColorScheme extends BaseColorScheme {
+  const CottonCandyColorScheme._();
+
+  static const instance = CottonCandyColorScheme._();
+
   @override
   ColorScheme get dark => ColorScheme.dark(
         primary: Color(0xFFFFB1C1),

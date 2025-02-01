@@ -3,6 +3,10 @@ import 'package:yominexus/core/themes/base_color_scheme.dart';
 
 @immutable
 final class DoomColorScheme extends BaseColorScheme {
+  const DoomColorScheme._();
+
+  static const instance = DoomColorScheme._();
+
   @override
   ColorScheme get dark => ColorScheme.dark(
         primary: Color(0xFFFF0000),

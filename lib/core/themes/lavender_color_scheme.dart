@@ -3,6 +3,10 @@ import 'package:yominexus/core/themes/base_color_scheme.dart';
 
 @immutable
 final class LavenderColorScheme extends BaseColorScheme {
+  const LavenderColorScheme._();
+
+  static const instance = LavenderColorScheme._();
+
   @override
   ColorScheme get dark => ColorScheme.dark(
         primary: Color(0xFFA177FF),
