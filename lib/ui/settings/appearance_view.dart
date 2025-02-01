@@ -50,8 +50,7 @@ class ThemeModeSelectorButtons extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final ThemeMode themeMode =
-        ref.watch(yominexusThemeModeProvider).value ?? ThemeMode.system;
+    final ThemeMode themeMode = ref.watch(yominexusThemeModeProvider);
     return SegmentedButton<ThemeMode>(
       segments: <ButtonSegment<ThemeMode>>[
         ButtonSegment(

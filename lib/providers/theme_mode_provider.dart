@@ -8,12 +8,12 @@ part 'theme_mode_provider.g.dart';
 @riverpod
 class YominexusThemeMode extends _$YominexusThemeMode {
   Future<void> updateThemeMode(ThemeMode themeMode) async {
-    state = AsyncValue.data(themeMode);
+    state = themeMode;
     await ref.read(sharedPreferencesProvider).setThemeMode(themeMode);
   }
 
   @override
-  Future<ThemeMode> build() async {
-    return await ref.read(sharedPreferencesProvider).getThemeMode();
+  ThemeMode build() {
+    return ref.read(sharedPreferencesProvider).getThemeMode();
   }
 }
