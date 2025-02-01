@@ -52,4 +52,7 @@ final class CloudflareColorScheme extends BaseColorScheme {
         onInverseSurface: Color(0xFFF3EFF4),
         outline: Color(0xFFF38020),
       );
+
+  @override
+  String get name => 'Cloudflare';
 }
