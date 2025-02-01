@@ -13,7 +13,7 @@ class YominexusThemeMode extends _$YominexusThemeMode {
   }
 
   @override
-  Future<ThemeMode> build() {
-    return ref.read(sharedPreferencesProvider).getThemeMode();
+  Future<ThemeMode> build() async {
+    return await ref.read(sharedPreferencesProvider).getThemeMode();
   }
 }
