@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 @immutable
 abstract class BaseColorScheme {
+  const BaseColorScheme();
+
   static const Color _surfaceContainer = Color(0xFF0C0C0C);
   static const Color _surfaceContainerHigh = Color(0xFF131313);
   static const Color _surfaceContainerHighest = Color(0xFF1B1B1B);
