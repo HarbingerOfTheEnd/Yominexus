@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yominexus/ui/settings/appearance_view.dart';
 import 'package:yominexus/ui/settings/settings_view.dart';
 
 @immutable
@@ -11,5 +12,6 @@ final class Constants {
   static const String initialRoute = SettingsView.routeName;
   static final Map<String, WidgetBuilder> routes = {
     SettingsView.routeName: (BuildContext context) => const SettingsView(),
+    AppearanceView.routeName: (BuildContext context) => const AppearanceView(),
   };
 }
