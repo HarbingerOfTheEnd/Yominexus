@@ -81,9 +81,9 @@ class ThemeModeSelectorButtons extends ConsumerWidget {
       selected: <ThemeMode>{
         themeMode,
       },
-      onSelectionChanged: (selected) {
+      onSelectionChanged: (selected) async {
         final ThemeMode selectedThemeMode = selected.first;
-        ref
+        await ref
             .read(yominexusThemeModeProvider.notifier)
             .updateThemeMode(selectedThemeMode);
       },
