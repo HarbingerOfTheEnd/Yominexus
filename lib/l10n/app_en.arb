@@ -1,3 +1,8 @@
 {
-	"@@locale": "en"
+	"@@locale": "en",
+	"@@author": "Sai Kumar",
+	"settings": "Settings",
+	"@settings": {
+		"description": "The word 'Settings'"
+	}
 }
