@@ -8,6 +8,7 @@ abstract class BaseColorScheme {
 
   ColorScheme get dark;
   ColorScheme get light;
+  String get name;
 
   ColorScheme getColorScheme({required bool isDark, required bool isAmoled}) {
     if (!isDark) {
