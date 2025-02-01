@@ -7,7 +7,7 @@ part of 'theme_mode_provider.dart';
 // **************************************************************************
 
 String _$yominexusThemeModeHash() =>
-    r'6e320a10c1e57800b115104fccc72282b6935651';
+    r'bd72c5a028ff4ffd5e6dd08da92c2d68a72d362b';
 
 /// See also [YominexusThemeMode].
 @ProviderFor(YominexusThemeMode)

@@ -9,7 +9,7 @@ part 'theme_mode_provider.g.dart';
 class YominexusThemeMode extends _$YominexusThemeMode {
   Future<void> updateThemeMode(ThemeMode themeMode) async {
     state = AsyncValue.data(themeMode);
-    ref.read(sharedPreferencesProvider).setThemeMode(themeMode);
+    await ref.read(sharedPreferencesProvider).setThemeMode(themeMode);
   }
 
   @override
