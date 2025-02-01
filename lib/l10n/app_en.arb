@@ -4,5 +4,9 @@
 	"settings": "Settings",
 	"@settings": {
 		"description": "The word 'Settings'"
+	},
+	"appearance": "Appearance",
+	"@appearance": {
+		"description": "The word 'Appearance'"
 	}
 }
