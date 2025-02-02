@@ -24,6 +24,14 @@ class App extends ConsumerWidget {
       ),
       useMaterial3: true,
     );
+    final ThemeData darkTheme = ThemeData.dark(
+      useMaterial3: true,
+    ).copyWith(
+      colorScheme: colorScheme.getColorScheme(
+        isDark: true,
+        isAmoled: isAmoled,
+      ),
+    );
 
     return MaterialApp(
       localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
@@ -40,6 +48,7 @@ class App extends ConsumerWidget {
       initialRoute: Constants.initialRoute,
       themeMode: themeMode,
       theme: theme,
+      darkTheme: darkTheme,
     );
   }
 }
