@@ -22,6 +22,7 @@ class App extends ConsumerWidget {
       supportedLocales: const <Locale>[
         Locale('en', ''),
       ],
+      locale: const Locale('en', ''),
       routes: Constants.routes,
       initialRoute: Constants.initialRoute,
       themeMode: themeMode,
