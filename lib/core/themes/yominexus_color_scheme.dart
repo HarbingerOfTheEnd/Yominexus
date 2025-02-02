@@ -3,6 +3,10 @@ import 'package:yominexus/core/themes/base_color_scheme.dart';
 
 @immutable
 class YominexusColorScheme extends BaseColorScheme {
+  const YominexusColorScheme._();
+
+  static const YominexusColorScheme instance = YominexusColorScheme._();
+
   @override
   ColorScheme get dark => ColorScheme.dark(
         primary: Color(0xFFB0C6FF),
