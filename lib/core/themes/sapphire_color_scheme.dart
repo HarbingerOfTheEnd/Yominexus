@@ -3,6 +3,10 @@ import 'package:yominexus/core/themes/base_color_scheme.dart';
 
 @immutable
 final class SapphireColorScheme extends BaseColorScheme {
+  const SapphireColorScheme._();
+
+  static const SapphireColorScheme instance = SapphireColorScheme._();
+
   @override
   ColorScheme get dark => ColorScheme.dark(
         primary: Color(0xFF1E88E5),
