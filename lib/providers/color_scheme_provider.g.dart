@@ -7,7 +7,7 @@ part of 'color_scheme_provider.dart';
 // **************************************************************************
 
 String _$yominexusColorSchemeHash() =>
-    r'604bc7f36713af1cb584a6e024e9fd620660242b';
+    r'e1120da9ee5ef93656d7c5bec1ffd19cb65678bf';
 
 /// See also [YominexusColorScheme].
 @ProviderFor(YominexusColorScheme)

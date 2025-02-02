@@ -8,6 +8,7 @@ part 'color_scheme_provider.g.dart';
 @riverpod
 class YominexusColorScheme extends _$YominexusColorScheme {
   Future<void> updateColorScheme(BaseColorScheme colorScheme) async {
+    state = colorScheme;
     await ref.read(sharedPreferencesProvider).setColorScheme(colorScheme);
   }
 
