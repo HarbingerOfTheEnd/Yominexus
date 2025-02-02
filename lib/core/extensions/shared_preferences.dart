@@ -37,3 +37,13 @@ extension ColorSchemeExt on SharedPreferencesWithCache {
     await setString(Constants.colorSchemeKey, colorScheme.name);
   }
 }
+
+extension AmoledModeExt on SharedPreferencesWithCache {
+  bool getAmoledMode() {
+    return getBool(Constants.amoledModeKey) ?? false;
+  }
+
+  Future<void> setAmoledMode(bool amoledMode) async {
+    await setBool(Constants.amoledModeKey, amoledMode);
+  }
+}
