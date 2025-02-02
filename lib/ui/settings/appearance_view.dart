@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:yominexus/providers/theme_mode_provider.dart';
 import 'package:yominexus/ui/settings/settings_view.dart';
+import 'package:yominexus/ui/settings/widgets/theme_mode_selector_buttons.dart';
 
 class AppearanceView extends ConsumerWidget {
   const AppearanceView({super.key});
@@ -37,56 +37,12 @@ class AppearanceView extends ConsumerWidget {
             padding: const EdgeInsets.symmetric(
               horizontal: 20.0,
             ),
-            child: ThemeModeSelectorButtons(),
+            child: Center(
+              child: ThemeModeSelectorButtons(),
+            ),
           ),
         ],
       ),
-    );
-  }
-}
-
-class ThemeModeSelectorButtons extends ConsumerWidget {
-  const ThemeModeSelectorButtons({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final ThemeMode themeMode = ref.watch(yominexusThemeModeProvider);
-    return SegmentedButton<ThemeMode>(
-      segments: <ButtonSegment<ThemeMode>>[
-        ButtonSegment(
-          value: ThemeMode.system,
-          label: Center(
-            child: Text(
-              AppLocalizations.of(context)?.systemThemeMode ?? 'System',
-            ),
-          ),
-        ),
-        ButtonSegment(
-          value: ThemeMode.light,
-          label: Center(
-            child: Text(
-              AppLocalizations.of(context)?.lightThemeMode ?? 'Light',
-            ),
-          ),
-        ),
-        ButtonSegment(
-          value: ThemeMode.dark,
-          label: Center(
-            child: Text(
-              AppLocalizations.of(context)?.darkThemeMode ?? 'Dark',
-            ),
-          ),
-        ),
-      ],
-      selected: <ThemeMode>{
-        themeMode,
-      },
-      onSelectionChanged: (selected) async {
-        final ThemeMode selectedThemeMode = selected.first;
-        await ref
-            .read(yominexusThemeModeProvider.notifier)
-            .updateThemeMode(selectedThemeMode);
-      },
     );
   }
 }
