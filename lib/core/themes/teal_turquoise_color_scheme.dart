@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:yominexus/core/themes/base_color_scheme.dart';
 
 @immutable
-class TealTurqoiseColorScheme extends BaseColorScheme {
-  const TealTurqoiseColorScheme._();
+class TealTurquoiseColorScheme extends BaseColorScheme {
+  const TealTurquoiseColorScheme._();
 
-  static const TealTurqoiseColorScheme instance = TealTurqoiseColorScheme._();
+  static const TealTurquoiseColorScheme instance = TealTurquoiseColorScheme._();
 
   @override
   ColorScheme get dark => ColorScheme.dark(
