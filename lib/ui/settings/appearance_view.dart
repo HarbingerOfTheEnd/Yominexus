@@ -3,6 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yominexus/ui/settings/settings_view.dart';
 import 'package:yominexus/ui/settings/widgets/theme_mode_selector_buttons.dart';
+import 'package:yominexus/ui/settings/widgets/theme_preference_widget.dart';
 
 class AppearanceView extends ConsumerWidget {
   const AppearanceView({super.key});
@@ -41,6 +42,7 @@ class AppearanceView extends ConsumerWidget {
               child: ThemeModeSelectorButtons(),
             ),
           ),
+          ThemePreferenceWidget(),
         ],
       ),
     );
