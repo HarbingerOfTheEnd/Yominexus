@@ -9,8 +9,11 @@ final class Constants {
   static const String _keyPrefix = 'org.yominexus';
   static const String themeModeKey = '$_keyPrefix.themeMode';
   static const String colorSchemeKey = '$_keyPrefix.colorScheme';
+  static const String amoledModeKey = '$_keyPrefix.amoledMode';
   static const Set<String> allowList = <String>{
     themeModeKey,
+    colorSchemeKey,
+    amoledModeKey,
   };
 
   static const String initialRoute = SettingsView.routeName;
