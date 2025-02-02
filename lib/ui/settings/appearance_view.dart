@@ -55,25 +55,25 @@ class ThemeModeSelectorButtons extends ConsumerWidget {
       segments: <ButtonSegment<ThemeMode>>[
         ButtonSegment(
           value: ThemeMode.system,
-          label: const Center(
+          label: Center(
             child: Text(
-              'System',
+              AppLocalizations.of(context)?.systemThemeMode ?? 'System',
             ),
           ),
         ),
         ButtonSegment(
           value: ThemeMode.light,
-          label: const Center(
+          label: Center(
             child: Text(
-              'Light',
+              AppLocalizations.of(context)?.lightThemeMode ?? 'Light',
             ),
           ),
         ),
         ButtonSegment(
           value: ThemeMode.dark,
-          label: const Center(
+          label: Center(
             child: Text(
-              'Dark',
+              AppLocalizations.of(context)?.darkThemeMode ?? 'Dark',
             ),
           ),
         ),
