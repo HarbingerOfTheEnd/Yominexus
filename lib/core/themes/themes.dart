@@ -37,7 +37,7 @@ enum YominexusTheme {
   yotsuba,
 }
 
-extension on YominexusTheme {
+extension NameExt on YominexusTheme {
   String get name => switch (this) {
         YominexusTheme.cloudflare => CloudflareColorScheme.instance.name,
         YominexusTheme.cottonCandy => CottonCandyColorScheme.instance.name,
