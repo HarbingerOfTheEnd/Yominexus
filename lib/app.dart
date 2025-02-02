@@ -3,6 +3,9 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yominexus/core/constants.dart';
+import 'package:yominexus/core/themes/base_color_scheme.dart';
+import 'package:yominexus/providers/amoled_mode_provider.dart';
+import 'package:yominexus/providers/color_scheme_provider.dart';
 import 'package:yominexus/providers/theme_mode_provider.dart';
 
 class App extends ConsumerWidget {
@@ -11,6 +14,16 @@ class App extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final ThemeMode themeMode = ref.watch(yominexusThemeModeProvider);
+    final bool isAmoled = ref.watch(yominexusAmoledProvider);
+    final BaseColorScheme colorScheme = ref.watch(yominexusColorSchemeProvider);
+
+    final ThemeData theme = ThemeData.from(
+      colorScheme: colorScheme.getColorScheme(
+        isDark: themeMode == ThemeMode.dark,
+        isAmoled: isAmoled,
+      ),
+      useMaterial3: true,
+    );
 
     return MaterialApp(
       localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
@@ -26,6 +39,7 @@ class App extends ConsumerWidget {
       routes: Constants.routes,
       initialRoute: Constants.initialRoute,
       themeMode: themeMode,
+      theme: theme,
     );
   }
 }
