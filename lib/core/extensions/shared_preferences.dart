@@ -32,4 +32,8 @@ extension ColorSchemeExt on SharedPreferencesWithCache {
         )
         .value;
   }
+
+  Future<void> setColorScheme(BaseColorScheme colorScheme) async {
+    await setString(Constants.colorSchemeKey, colorScheme.name);
+  }
 }
