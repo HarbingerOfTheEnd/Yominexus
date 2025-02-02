@@ -7,6 +7,7 @@ part 'amoled_mode_provider.g.dart';
 @riverpod
 class YominexusAmoled extends _$YominexusAmoled {
   Future<void> updateAmoledMode(bool amoledMode) async {
+    state = amoledMode;
     await ref.read(sharedPreferencesProvider).setAmoledMode(amoledMode);
   }
 

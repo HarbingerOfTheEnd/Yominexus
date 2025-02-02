@@ -6,7 +6,7 @@ part of 'amoled_mode_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$yominexusAmoledHash() => r'c93345edfb4214ce12cdb2435df902421e73e599';
+String _$yominexusAmoledHash() => r'b511884e993b28c7bf4baab14b2ac836f2cf2366';
 
 /// See also [YominexusAmoled].
 @ProviderFor(YominexusAmoled)
