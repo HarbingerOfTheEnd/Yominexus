@@ -14,8 +14,10 @@ class SettingsView extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          AppLocalizations.of(context)?.settings ?? 'Settings',
+          context.l10n.settings,
         ),
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
         leading: BackButton(
           onPressed: () {
             //TODO: Add logic to go back
