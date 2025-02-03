@@ -19,6 +19,7 @@ class AppearanceView extends ConsumerWidget {
         ),
       ),
       body: ListView(
+        shrinkWrap: true,
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.symmetric(
