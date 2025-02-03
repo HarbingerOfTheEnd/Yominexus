@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:yominexus/core/extensions/build_context.dart';
 import 'package:yominexus/ui/settings/settings_view.dart';
 import 'package:yominexus/ui/settings/widgets/theme_mode_selector_buttons.dart';
 import 'package:yominexus/ui/settings/widgets/theme_preference_widget.dart';
@@ -15,7 +15,7 @@ class AppearanceView extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          AppLocalizations.of(context)?.appearance ?? 'Appearance',
+          context.l10n.appearance,
         ),
       ),
       body: ListView(
