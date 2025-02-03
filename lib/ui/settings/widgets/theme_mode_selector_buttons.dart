@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:yominexus/core/extensions/build_context.dart';
 import 'package:yominexus/providers/theme_mode_provider.dart';
 
 class ThemeModeSelectorButtons extends ConsumerStatefulWidget {
@@ -25,7 +25,7 @@ class _ThemeModeSelectorButtonsState
           value: ThemeMode.system,
           label: Center(
             child: Text(
-              AppLocalizations.of(context)?.systemThemeMode ?? 'System',
+              context.l10n.systemThemeMode,
             ),
           ),
         ),
@@ -33,7 +33,7 @@ class _ThemeModeSelectorButtonsState
           value: ThemeMode.light,
           label: Center(
             child: Text(
-              AppLocalizations.of(context)?.lightThemeMode ?? 'Light',
+              context.l10n.lightThemeMode,
             ),
           ),
         ),
@@ -41,7 +41,7 @@ class _ThemeModeSelectorButtonsState
           value: ThemeMode.dark,
           label: Center(
             child: Text(
-              AppLocalizations.of(context)?.darkThemeMode ?? 'Dark',
+              context.l10n.darkThemeMode,
             ),
           ),
         ),
