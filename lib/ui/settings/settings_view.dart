@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:yominexus/core/extensions/build_context.dart';
 import 'package:yominexus/ui/settings/appearance_view.dart';
 
 class SettingsView extends ConsumerWidget {
@@ -35,7 +36,7 @@ class SettingsView extends ConsumerWidget {
         children: <Widget>[
           ListTile(
               title: Text(
-                AppLocalizations.of(context)?.appearance ?? 'Appearance',
+                context.l10n.appearance,
               ),
               subtitle: const Text('Theme, date & time format'),
               leading: const Icon(
