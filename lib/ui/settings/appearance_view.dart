@@ -17,6 +17,8 @@ class AppearanceView extends ConsumerWidget {
         title: Text(
           context.l10n.appearance,
         ),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
       ),
       body: ListView(
         shrinkWrap: true,
