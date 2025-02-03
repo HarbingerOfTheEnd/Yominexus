@@ -45,7 +45,10 @@ class AppearanceView extends ConsumerWidget {
               child: ThemeModeSelectorButtons(),
             ),
           ),
-          ThemePreferenceWidget(),
+          SizedBox(
+            height: 50.0,
+            child: ThemePreferenceWidget(),
+          ),
         ],
       ),
     );
