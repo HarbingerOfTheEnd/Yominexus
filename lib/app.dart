@@ -24,13 +24,12 @@ class App extends ConsumerWidget {
       ),
       useMaterial3: true,
     );
-    final ThemeData darkTheme = ThemeData.dark(
-      useMaterial3: true,
-    ).copyWith(
+    final ThemeData darkTheme = ThemeData.from(
       colorScheme: colorScheme.getColorScheme(
         isDark: true,
         isAmoled: isAmoled,
       ),
+      useMaterial3: true,
     );
 
     return MaterialApp(
