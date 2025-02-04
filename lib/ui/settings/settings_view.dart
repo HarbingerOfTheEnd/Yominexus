@@ -16,7 +16,6 @@ class SettingsView extends ConsumerWidget {
           context.l10n.settings,
         ),
         elevation: 0.0,
-        backgroundColor: Colors.transparent,
         leading: BackButton(
           onPressed: () {
             //TODO: Add logic to go back
