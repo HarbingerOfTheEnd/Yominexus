@@ -38,9 +38,15 @@ class SettingsView extends ConsumerWidget {
               title: Text(
                 context.l10n.appearance,
               ),
-              subtitle: const Text('Theme, date & time format'),
-              leading: const Icon(
-                Icons.palette,
+              subtitle: Text(
+                'Theme, date & time format',
+                style: TextStyle(
+                  fontSize: 12.0,
+                ),
+              ),
+              leading: Icon(
+                Icons.palette_outlined,
+                color: Theme.of(context).colorScheme.primary,
               ),
               onTap: () {
                 Navigator.of(context).pushNamed(AppearanceView.routeName);
