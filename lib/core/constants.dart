@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yominexus/ui/settings/appearance_view.dart';
-import 'package:yominexus/ui/settings/settings_view.dart';
+import 'package:yominexus/ui/more/settings/appearance_view.dart';
+import 'package:yominexus/ui/more/settings/settings_view.dart';
 
 @immutable
 final class Constants {
