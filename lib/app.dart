@@ -16,22 +16,32 @@ class App extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final ThemeMode themeMode = ref.watch(yominexusThemeModeProvider);
     final bool isAmoled = ref.watch(yominexusAmoledProvider);
-    final BaseColorScheme colorScheme = ref.watch(yominexusColorSchemeProvider);
+    final BaseColorScheme baseColorScheme =
+        ref.watch(yominexusColorSchemeProvider);
+
+    final ColorScheme colorScheme = baseColorScheme.getColorScheme(
+      isDark: themeMode == ThemeMode.dark,
+      isAmoled: isAmoled,
+    );
+    final ColorScheme darkColorScheme = baseColorScheme.getColorScheme(
+      isDark: true,
+      isAmoled: isAmoled,
+    );
 
     final ThemeData theme = ThemeData.from(
-      colorScheme: colorScheme.getColorScheme(
-        isDark: themeMode == ThemeMode.dark,
-        isAmoled: isAmoled,
+      colorScheme: colorScheme,
+      textTheme: GoogleFonts.robotoTextTheme().apply(
+        bodyColor: colorScheme.onSurface,
+        displayColor: colorScheme.onPrimary,
       ),
-      textTheme: GoogleFonts.robotoTextTheme(),
       useMaterial3: true,
     );
     final ThemeData darkTheme = ThemeData.from(
-      colorScheme: colorScheme.getColorScheme(
-        isDark: true,
-        isAmoled: isAmoled,
+      colorScheme: darkColorScheme,
+      textTheme: GoogleFonts.robotoTextTheme().apply(
+        bodyColor: darkColorScheme.onSurface,
+        displayColor: darkColorScheme.onPrimary,
       ),
-      textTheme: GoogleFonts.robotoTextTheme(),
       useMaterial3: true,
     );
 
