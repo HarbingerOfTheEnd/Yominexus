@@ -17,7 +17,7 @@ final class Constants {
     amoledModeKey,
   };
 
-  static const String initialRoute = SettingsView.routeName;
+  static const String initialRoute = NovelLibraryView.routeName;
   static final Map<String, WidgetBuilder> routes = {
     SettingsView.routeName: (context) => const SettingsView(),
     AppearanceView.routeName: (context) => const AppearanceView(),
