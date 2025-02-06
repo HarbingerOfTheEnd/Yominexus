@@ -60,6 +60,7 @@ extension NameExt on YominexusTheme {
 }
 
 const Map<YominexusTheme, BaseColorScheme> colorSchemes = {
+  YominexusTheme.yominexus: YominexusColorScheme.instance,
   YominexusTheme.cloudflare: CloudflareColorScheme.instance,
   YominexusTheme.cottonCandy: CottonCandyColorScheme.instance,
   YominexusTheme.doom: DoomColorScheme.instance,
@@ -75,6 +76,5 @@ const Map<YominexusTheme, BaseColorScheme> colorSchemes = {
   YominexusTheme.tealTurquoise: TealTurquoiseColorScheme.instance,
   YominexusTheme.tidalWave: TidalWaveColorScheme.instance,
   YominexusTheme.yinYang: YinYangColorScheme.instance,
-  YominexusTheme.yominexus: YominexusColorScheme.instance,
   YominexusTheme.yotsuba: YotsubaColorScheme.instance,
 };
