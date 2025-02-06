@@ -8,7 +8,9 @@ class TakoColorScheme extends BaseColorScheme {
   static const TakoColorScheme instance = TakoColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFFF3B375),
+        brightness: Brightness.dark,
         primary: Color(0xFFF3B375),
         onPrimary: Color(0xFF38294E),
         primaryContainer: Color(0xFFF3B375),
@@ -37,7 +39,9 @@ class TakoColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFF66577E),
+        brightness: Brightness.light,
         primary: Color(0xFF66577E),
         onPrimary: Color(0xFFF3B375),
         primaryContainer: Color(0xFF66577E),

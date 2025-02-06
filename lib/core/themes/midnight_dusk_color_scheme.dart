@@ -8,7 +8,9 @@ final class MidnightDuskColorScheme extends BaseColorScheme {
   static const MidnightDuskColorScheme instance = MidnightDuskColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFFF02475),
+        brightness: Brightness.dark,
         primary: Color(0xFFF02475),
         onPrimary: Color(0xFFFFFFFF),
         primaryContainer: Color(0xFFBD1C5C),
@@ -37,7 +39,9 @@ final class MidnightDuskColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFFBB0054),
+        brightness: Brightness.light,
         primary: Color(0xFFBB0054),
         onPrimary: Color(0xFFFFFFFF),
         primaryContainer: Color(0xFFFFD9E1),

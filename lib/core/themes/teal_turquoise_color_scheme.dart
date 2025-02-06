@@ -8,7 +8,9 @@ class TealTurquoiseColorScheme extends BaseColorScheme {
   static const TealTurquoiseColorScheme instance = TealTurquoiseColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFF40E0D0),
+        brightness: Brightness.dark,
         primary: Color(0xFF40E0D0),
         onPrimary: Color(0xFF000000),
         primaryContainer: Color(0xFF40E0D0),
@@ -37,7 +39,9 @@ class TealTurquoiseColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFF008080),
+        brightness: Brightness.light,
         primary: Color(0xFF008080),
         onPrimary: Color(0xFFFFFFFF),
         primaryContainer: Color(0xFF008080),

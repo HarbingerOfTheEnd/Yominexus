@@ -8,7 +8,9 @@ final class MochaColorScheme extends BaseColorScheme {
   static const MochaColorScheme instance = MochaColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFFEBC248),
+        brightness: Brightness.dark,
         primary: Color(0xFFEBC248),
         onPrimary: Color(0xFF3D2F00),
         primaryContainer: Color(0xFF584400),
@@ -33,7 +35,9 @@ final class MochaColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFF745B00),
+        brightness: Brightness.light,
         primary: Color(0xFF745B00),
         onPrimary: Color(0xFFFFFFFF),
         primaryContainer: Color(0xFFFFE08D),

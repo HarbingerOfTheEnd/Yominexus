@@ -8,7 +8,9 @@ final class LavenderColorScheme extends BaseColorScheme {
   static const instance = LavenderColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFFA177FF),
+        brightness: Brightness.dark,
         primary: Color(0xFFA177FF),
         onPrimary: Color(0xFF3D0090),
         primaryContainer: Color(0xFFA177FF),
@@ -44,7 +46,9 @@ final class LavenderColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFF6D41C8),
+        brightness: Brightness.light,
         primary: Color(0xFF6D41C8),
         onPrimary: Color(0xFFFFFFFF),
         primaryContainer: Color(0xFF7B46AF),

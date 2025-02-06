@@ -8,7 +8,9 @@ final class MatrixColorScheme extends BaseColorScheme {
   static const instance = MatrixColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFF00FF00),
+        brightness: Brightness.dark,
         primary: Color(0xFF00FF00),
         onPrimary: Color(0xFFFAFAFA),
         primaryContainer: Color(0xFF00FF00),
@@ -33,7 +35,9 @@ final class MatrixColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFF00FF00),
+        brightness: Brightness.light,
         primary: Color(0xFF00FF00),
         onPrimary: Color(0xFF000000),
         primaryContainer: Color(0xFF00FF00),

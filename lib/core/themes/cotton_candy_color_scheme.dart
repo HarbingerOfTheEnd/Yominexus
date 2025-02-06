@@ -8,7 +8,9 @@ final class CottonCandyColorScheme extends BaseColorScheme {
   static const instance = CottonCandyColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFFFFB1C1),
+        brightness: Brightness.dark,
         primary: Color(0xFFFFB1C1),
         onPrimary: Color(0xFF5F112B),
         primaryContainer: Color(0xFF7C2941),
@@ -33,7 +35,9 @@ final class CottonCandyColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFF9A4058),
+        brightness: Brightness.light,
         primary: Color(0xFF9A4058),
         onPrimary: Color(0xFFFFFFFF),
         primaryContainer: Color(0xFFFFD9DF),

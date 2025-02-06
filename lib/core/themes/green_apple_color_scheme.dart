@@ -8,7 +8,9 @@ final class GreenAppleColorScheme extends BaseColorScheme {
   static const instance = GreenAppleColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFF7ADB8F),
+        brightness: Brightness.dark,
         primary: Color(0xFF7ADB8F),
         onPrimary: Color(0xFF003917),
         primaryContainer: Color(0xFF017737),
@@ -44,7 +46,9 @@ final class GreenAppleColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFF005927),
+        brightness: Brightness.light,
         primary: Color(0xFF005927),
         onPrimary: Color(0xFFFFFFFF),
         primaryContainer: Color(0xFF188140),

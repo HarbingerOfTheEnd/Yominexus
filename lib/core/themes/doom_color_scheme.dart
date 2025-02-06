@@ -8,7 +8,9 @@ final class DoomColorScheme extends BaseColorScheme {
   static const instance = DoomColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFFFF0000),
+        brightness: Brightness.dark,
         primary: Color(0xFFFF0000),
         onPrimary: Color(0xFFFAFAFA),
         primaryContainer: Color(0xFFFF0000),
@@ -33,7 +35,9 @@ final class DoomColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFFFF0000),
+        brightness: Brightness.light,
         primary: Color(0xFFFF0000),
         onPrimary: Color(0xFFFFFFFF),
         primaryContainer: Color(0xFFFF0000),

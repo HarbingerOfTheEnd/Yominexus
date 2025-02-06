@@ -8,7 +8,9 @@ class YominexusColorScheme extends BaseColorScheme {
   static const YominexusColorScheme instance = YominexusColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFFB0C6FF),
+        brightness: Brightness.dark,
         primary: Color(0xFFB0C6FF),
         onPrimary: Color(0xFF002D6E),
         primaryContainer: Color(0xFF00429B),
@@ -42,7 +44,9 @@ class YominexusColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFF0058CA),
+        brightness: Brightness.light,
         primary: Color(0xFF0058CA),
         onPrimary: Color(0xFFFFFFFF),
         primaryContainer: Color(0xFFD9E2FF),

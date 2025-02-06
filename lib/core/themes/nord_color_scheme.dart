@@ -8,7 +8,9 @@ final class NordColorScheme extends BaseColorScheme {
   static const NordColorScheme instance = NordColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFF88C0D0),
+        brightness: Brightness.dark,
         primary: Color(0xFF88C0D0),
         onPrimary: Color(0xFF2E3440),
         primaryContainer: Color(0xFF88C0D0),
@@ -41,7 +43,9 @@ final class NordColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFF5E81AC),
+        brightness: Brightness.light,
         primary: Color(0xFF5E81AC),
         onPrimary: Color(0xFF000000),
         primaryContainer: Color(0xFF5E81AC),

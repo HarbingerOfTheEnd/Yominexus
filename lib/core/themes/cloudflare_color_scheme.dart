@@ -8,7 +8,9 @@ final class CloudflareColorScheme extends BaseColorScheme {
   static const instance = CloudflareColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFFF38020),
+        brightness: Brightness.dark,
         primary: Color(0xFFF38020),
         onPrimary: Color(0xFF1B1B22),
         primaryContainer: Color(0xFFF38020),
@@ -33,7 +35,9 @@ final class CloudflareColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFFF38020),
+        brightness: Brightness.light,
         primary: Color(0xFFF38020),
         onPrimary: Color(0xFFEFF2F5),
         primaryContainer: Color(0xFFF38020),

@@ -8,7 +8,9 @@ final class SapphireColorScheme extends BaseColorScheme {
   static const SapphireColorScheme instance = SapphireColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFF1E88E5),
+        brightness: Brightness.dark,
         primary: Color(0xFF1E88E5),
         onPrimary: Color(0xFFFAFAFA),
         primaryContainer: Color(0xFF1E88E5),
@@ -33,7 +35,9 @@ final class SapphireColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFF1E88E5),
+        brightness: Brightness.light,
         primary: Color(0xFF1E88E5),
         onPrimary: Color(0xFFFFFFFF),
         primaryContainer: Color(0xFF1E88E5),

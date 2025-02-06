@@ -8,7 +8,9 @@ class YinYangColorScheme extends BaseColorScheme {
   static const YinYangColorScheme instance = YinYangColorScheme._();
 
   @override
-  ColorScheme get dark => ColorScheme.dark(
+  ColorScheme get dark => ColorScheme.fromSeed(
+        seedColor: Color(0xFFFFFFFF),
+        brightness: Brightness.dark,
         primary: Color(0xFFFFFFFF),
         onPrimary: Color(0xFF5A5A5A),
         primaryContainer: Color(0xFFFFFFFF),
@@ -37,7 +39,9 @@ class YinYangColorScheme extends BaseColorScheme {
       );
 
   @override
-  ColorScheme get light => ColorScheme.light(
+  ColorScheme get light => ColorScheme.fromSeed(
+        seedColor: Color(0xFF000000),
+        brightness: Brightness.light,
         primary: Color(0xFF000000),
         onPrimary: Color(0xFFFFFFFF),
         primaryContainer: Color(0xFF000000),
