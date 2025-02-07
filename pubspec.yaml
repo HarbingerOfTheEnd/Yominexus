@@ -18,6 +18,8 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  drift: ^2.24.0
+  drift_flutter: ^0.2.4
   flutter_riverpod: ^2.6.1
   google_fonts: ^6.2.1
   riverpod_annotation: ^2.6.1
@@ -26,6 +28,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  drift_dev: ^2.24.0
   build_runner: ^2.4.14
   custom_lint: ^0.7.2
   flutter_lints: ^5.0.0
