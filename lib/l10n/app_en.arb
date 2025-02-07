@@ -1,0 +1,24 @@
+{
+	"@@locale": "en",
+	"@@author": "Sai Kumar",
+	"settings": "Settings",
+	"@settings": {
+		"description": "The word 'Settings'"
+	},
+	"appearance": "Appearance",
+	"@appearance": {
+		"description": "The word 'Appearance'"
+	},
+	"systemThemeMode": "System",
+	"@systemThemeMode": {
+		"description": "System theme mode"
+	},
+	"lightThemeMode": "Light",
+	"@lightThemeMode": {
+		"description": "Light theme mode"
+	},
+	"darkThemeMode": "Dark",
+	"@darkThemeMode": {
+		"description": "Dark theme mode"
+	}
+}
