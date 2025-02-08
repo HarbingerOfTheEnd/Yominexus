@@ -1,4 +1,5 @@
 name: yominexus
+
 description: |
   Yominexus is an all-in-one content aggregator inspired by Tachiyomi, Mihon, Aniyomi, and QuickNovel.
   It provides a seamless reading experience for manga, novels, and anime tracking, allowing users
@@ -14,32 +15,30 @@ environment:
   sdk: ^3.6.1
 
 dependencies:
+  drift: ^2.24.0
+  drift_flutter: ^0.2.4
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  drift: ^2.24.0
-  drift_flutter: ^0.2.4
   flutter_riverpod: ^2.6.1
   google_fonts: ^6.2.1
   riverpod_annotation: ^2.6.1
   shared_preferences: ^2.5.1
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   drift_dev: ^2.24.0
   build_runner: ^2.4.14
   custom_lint: ^0.7.2
   flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
   mockito: ^5.4.5
   riverpod_generator: ^2.6.4
   riverpod_lint: ^2.6.4
 
 flutter:
   uses-material-design: true
-
   generate: true
-
   assets:
     - assets/images/
