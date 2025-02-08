@@ -18,6 +18,8 @@ final class Constants {
     amoledModeKey,
   };
 
+  static const String databaseName = 'yominexus';
+
   static const String initialRoute = MainView.routeName;
   static final GoRouter router = GoRouter(
     initialLocation: initialRoute,
