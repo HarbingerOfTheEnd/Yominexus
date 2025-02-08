@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:yominexus/core/extensions/build_context.dart';
 import 'package:yominexus/core/interfaces.dart';
 import 'package:yominexus/ui/novel/novel_library_view.dart';
 
@@ -29,8 +30,6 @@ class _MainViewState extends ConsumerState<MainView> {
     return LayoutBuilder(
       builder: (context, constraints) {
         final bool isWideScreen = constraints.maxWidth >= 600;
-        final MediaQueryData mediaQuery = MediaQuery.of(context);
-        final ThemeData theme = Theme.of(context);
 
         return Scaffold(
           bottomNavigationBar: isWideScreen
@@ -52,17 +51,14 @@ class _MainViewState extends ConsumerState<MainView> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               if (isWideScreen)
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: theme.dividerColor,
-                    ),
-                  ),
-                  width: mediaQuery.size.width * 0.05,
-                  height: mediaQuery.size.height,
+                SizedBox(
+                  width: context.mediaQuery.size.width * 0.04,
+                  height: context.mediaQuery.size.height,
                   child: NavigationRail(
                     leading: const Spacer(),
                     trailing: const Spacer(),
+                    backgroundColor:
+                        context.theme.colorScheme.primary.withAlpha(20),
                     destinations: _destinations
                         .map(
                           (loc) => NavigationRailDestination(
@@ -79,7 +75,9 @@ class _MainViewState extends ConsumerState<MainView> {
                     labelType: NavigationRailLabelType.all,
                   ),
                 ),
-              _destinations[current],
+              Expanded(
+                child: _destinations[current],
+              ),
             ],
           ),
         );
