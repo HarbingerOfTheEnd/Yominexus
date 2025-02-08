@@ -17,11 +17,6 @@ class SettingsView extends ConsumerWidget {
           context.l10n.settings,
         ),
         elevation: 0.0,
-        leading: BackButton(
-          onPressed: () {
-            //TODO: Add logic to go back
-          },
-        ),
         actions: <Widget>[
           IconButton(
             icon: const Icon(
