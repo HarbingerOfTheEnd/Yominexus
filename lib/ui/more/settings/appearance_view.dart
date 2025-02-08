@@ -3,8 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yominexus/core/extensions/build_context.dart';
 import 'package:yominexus/providers/amoled_mode_provider.dart';
 import 'package:yominexus/ui/more/settings/settings_view.dart';
-import 'package:yominexus/ui/more/settings/widgets/theme_mode_selector_buttons.dart';
-import 'package:yominexus/ui/more/settings/widgets/theme_preference_widget.dart';
+import 'package:yominexus/widgets/theme_mode_selector_buttons.dart';
+import 'package:yominexus/widgets/theme_preference_widget.dart';
 
 class AppearanceView extends ConsumerWidget {
   const AppearanceView({super.key});
