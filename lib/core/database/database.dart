@@ -1,7 +1,4 @@
 import 'package:drift/drift.dart';
-import 'package:drift_flutter/drift_flutter.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:yominexus/core/constants.dart';
 import 'package:yominexus/core/database/novel.dart';
 
 part 'database.g.dart';
@@ -12,17 +9,8 @@ part 'database.g.dart';
   ],
 )
 class Database extends _$Database {
-  Database() : super(_openConnection());
+  Database(super.e);
 
   @override
   int get schemaVersion => 1;
-
-  static QueryExecutor _openConnection() {
-    return driftDatabase(
-      name: Constants.databaseName,
-      native: DriftNativeOptions(
-        databaseDirectory: getApplicationSupportDirectory,
-      ),
-    );
-  }
 }
