@@ -45,7 +45,7 @@ class App extends ConsumerWidget {
       useMaterial3: true,
     );
 
-    return MaterialApp(
+    return MaterialApp.router(
       localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -56,8 +56,7 @@ class App extends ConsumerWidget {
         Locale('en', ''),
       ],
       locale: const Locale('en', ''),
-      routes: Constants.routes,
-      initialRoute: Constants.initialRoute,
+      routerConfig: Constants.router,
       themeMode: themeMode,
       theme: theme,
       darkTheme: darkTheme,
