@@ -58,6 +58,7 @@ class App extends ConsumerWidget {
       locale: const Locale('en', ''),
       routerConfig: Constants.router,
       themeMode: themeMode,
+      title: 'Yominexus',
       theme: theme,
       darkTheme: darkTheme,
     );
