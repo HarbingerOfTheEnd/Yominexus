@@ -16,9 +16,14 @@ class _ThemeModeSelectorButtonsState
   @override
   Widget build(BuildContext context) {
     final ThemeMode themeMode = ref.watch(yominexusThemeModeProvider);
-    return SegmentedButton<ThemeMode>(
+
+    return SegmentedButton(
       expandedInsets: EdgeInsets.symmetric(
-        horizontal: 100.0,
+        horizontal: context.mediaQuery.size.width * 0.3,
+      ),
+      selectedIcon: Icon(
+        Icons.check,
+        color: context.theme.colorScheme.onPrimary,
       ),
       segments: <ButtonSegment<ThemeMode>>[
         ButtonSegment(
