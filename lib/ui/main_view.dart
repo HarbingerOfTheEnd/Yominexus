@@ -13,9 +13,9 @@ class MainView extends ConsumerStatefulWidget {
 }
 
 class _MainViewState extends ConsumerState<MainView> {
-  final Map<int, MainViewLocation> _destinations = {
-    0: const NovelLibraryView(),
-  };
+  final List<Widget> _destinations = [
+    const NovelLibraryView(),
+  ];
   int current = 0;
 
   void _switchLocation(int newIndex) {
@@ -29,18 +29,20 @@ class _MainViewState extends ConsumerState<MainView> {
     return LayoutBuilder(
       builder: (context, constraints) {
         final bool isWideScreen = constraints.maxWidth >= 600;
+        final MediaQueryData mediaQuery = MediaQuery.of(context);
+        final ThemeData theme = Theme.of(context);
 
         return Scaffold(
           bottomNavigationBar: isWideScreen
               ? null
               : NavigationBar(
                   selectedIndex: current,
-                  destinations: _destinations.values
+                  destinations: _destinations
                       .map(
                         (loc) => NavigationDestination(
-                          icon: loc.iconOutlined,
-                          label: loc.label,
-                          selectedIcon: loc.icon,
+                          icon: (loc as MainViewLocation).iconOutlined,
+                          label: (loc as MainViewLocation).label,
+                          selectedIcon: (loc as MainViewLocation).icon,
                         ),
                       )
                       .toList(),
@@ -50,25 +52,34 @@ class _MainViewState extends ConsumerState<MainView> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               if (isWideScreen)
-                NavigationRail(
-                  destinations: _destinations.values
-                      .map(
-                        (loc) => NavigationRailDestination(
-                          icon: loc.iconOutlined,
-                          label: Text(
-                            loc.label,
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: theme.dividerColor,
+                    ),
+                  ),
+                  width: mediaQuery.size.width * 0.05,
+                  height: mediaQuery.size.height,
+                  child: NavigationRail(
+                    leading: const Spacer(),
+                    trailing: const Spacer(),
+                    destinations: _destinations
+                        .map(
+                          (loc) => NavigationRailDestination(
+                            icon: (loc as MainViewLocation).iconOutlined,
+                            label: Text(
+                              (loc as MainViewLocation).label,
+                            ),
+                            selectedIcon: (loc as MainViewLocation).icon,
                           ),
-                          selectedIcon: loc.icon,
-                        ),
-                      )
-                      .toList(),
-                  selectedIndex: current,
-                  onDestinationSelected: _switchLocation,
-                  labelType: NavigationRailLabelType.all,
+                        )
+                        .toList(),
+                    selectedIndex: current,
+                    onDestinationSelected: _switchLocation,
+                    labelType: NavigationRailLabelType.all,
+                  ),
                 ),
-              Expanded(
-                child: _destinations[current] as Widget,
-              ),
+              _destinations[current],
             ],
           ),
         );
