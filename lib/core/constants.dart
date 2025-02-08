@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yominexus/ui/main_view.dart';
 import 'package:yominexus/ui/more/settings/appearance_view.dart';
 import 'package:yominexus/ui/more/settings/settings_view.dart';
@@ -18,9 +19,21 @@ final class Constants {
   };
 
   static const String initialRoute = MainView.routeName;
-  static final Map<String, WidgetBuilder> routes = {
-    SettingsView.routeName: (context) => const SettingsView(),
-    AppearanceView.routeName: (context) => const AppearanceView(),
-    MainView.routeName: (context) => const MainView(),
-  };
+  static final GoRouter router = GoRouter(
+    initialLocation: initialRoute,
+    routes: <GoRoute>[
+      GoRoute(
+        path: SettingsView.routeName,
+        builder: (context, state) => const SettingsView(),
+      ),
+      GoRoute(
+        path: AppearanceView.routeName,
+        builder: (context, state) => const AppearanceView(),
+      ),
+      GoRoute(
+        path: MainView.routeName,
+        builder: (context, state) => const MainView(),
+      ),
+    ],
+  );
 }
