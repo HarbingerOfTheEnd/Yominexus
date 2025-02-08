@@ -42,7 +42,7 @@ class SettingsView extends ConsumerWidget {
               ),
               leading: Icon(
                 Icons.palette_outlined,
-                color: Theme.of(context).colorScheme.primary,
+                color: context.theme.colorScheme.primary,
               ),
               onTap: () {
                 context.go(AppearanceView.routeName);
