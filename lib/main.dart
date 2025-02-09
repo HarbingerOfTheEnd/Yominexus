@@ -3,7 +3,6 @@ import 'package:drift_flutter/drift_flutter.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:yominexus/app.dart';
 import 'package:yominexus/core/constants.dart';
@@ -31,22 +30,13 @@ Future<void> main() async {
   );
   final Database database = Database(_openConnection());
 
-  await SentryFlutter.init(
-    (options) {
-      options.dsn = Constants.sentryDsn;
-      options.tracesSampleRate = 1.0;
-      options.profilesSampleRate = 1.0;
-    },
-    appRunner: () async => runApp(
-      SentryWidget(
-        child: ProviderScope(
-          overrides: <Override>[
-            sharedPreferencesProvider.overrideWithValue(sharedPreferences),
-            databaseProvider.overrideWithValue(database),
-          ],
-          child: App(),
-        ),
-      ),
+  runApp(
+    ProviderScope(
+      overrides: <Override>[
+        sharedPreferencesProvider.overrideWithValue(sharedPreferences),
+        databaseProvider.overrideWithValue(database),
+      ],
+      child: App(),
     ),
   );
 }
