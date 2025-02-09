@@ -19,6 +19,7 @@ dependencies:
   drift_flutter: ^0.2.4
   flutter:
     sdk: flutter
+  flutter_dotenv: ^5.2.1
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.6.1
@@ -46,3 +47,4 @@ flutter:
   generate: true
   assets:
     - assets/images/
+    - .env
