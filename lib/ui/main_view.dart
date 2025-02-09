@@ -52,7 +52,8 @@ class _MainViewState extends ConsumerState<MainView> {
             children: <Widget>[
               if (isWideScreen)
                 SizedBox(
-                  width: context.mediaQuery.size.width * 0.04,
+                  width: context.mediaQuery.size.width *
+                      (constraints.maxWidth > 1000 ? 0.04 : 0.09),
                   height: context.mediaQuery.size.height,
                   child: NavigationRail(
                     leading: const Spacer(),
