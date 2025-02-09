@@ -61,6 +61,7 @@ class App extends ConsumerWidget {
       title: 'Yominexus',
       theme: theme,
       darkTheme: darkTheme,
+      restorationScopeId: 'app',
     );
   }
 }
