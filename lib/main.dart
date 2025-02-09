@@ -23,30 +23,28 @@ QueryExecutor _openConnection() {
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  final SharedPreferencesWithCache sharedPreferences =
+      await SharedPreferencesWithCache.create(
+    cacheOptions: const SharedPreferencesWithCacheOptions(
+      allowList: Constants.allowList,
+    ),
+  );
+  final Database database = Database(_openConnection());
+
   await SentryFlutter.init(
     (options) {
       options.dsn = Constants.sentryDsn;
       options.tracesSampleRate = 1.0;
       options.profilesSampleRate = 1.0;
     },
-  );
-  runApp(
-    ProviderScope(
-      overrides: <Override>[
-        sharedPreferencesProvider.overrideWithValue(
-          await SharedPreferencesWithCache.create(
-            cacheOptions: const SharedPreferencesWithCacheOptions(
-              allowList: Constants.allowList,
-            ),
-          ),
-        ),
-        databaseProvider.overrideWithValue(
-          Database(
-            _openConnection(),
-          ),
-        )
-      ],
-      child: App(),
+    appRunner: () async => runApp(
+      ProviderScope(
+        overrides: <Override>[
+          sharedPreferencesProvider.overrideWithValue(sharedPreferences),
+          databaseProvider.overrideWithValue(database),
+        ],
+        child: App(),
+      ),
     ),
   );
 }
