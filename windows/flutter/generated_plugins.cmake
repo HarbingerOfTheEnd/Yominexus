@@ -3,7 +3,6 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  sentry_flutter
   sqlite3_flutter_libs
 )
 
