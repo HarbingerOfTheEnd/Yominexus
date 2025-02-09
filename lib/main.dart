@@ -38,12 +38,14 @@ Future<void> main() async {
       options.profilesSampleRate = 1.0;
     },
     appRunner: () async => runApp(
-      ProviderScope(
-        overrides: <Override>[
-          sharedPreferencesProvider.overrideWithValue(sharedPreferences),
-          databaseProvider.overrideWithValue(database),
-        ],
-        child: App(),
+      SentryWidget(
+        child: ProviderScope(
+          overrides: <Override>[
+            sharedPreferencesProvider.overrideWithValue(sharedPreferences),
+            databaseProvider.overrideWithValue(database),
+          ],
+          child: App(),
+        ),
       ),
     ),
   );
