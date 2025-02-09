@@ -20,6 +20,11 @@ final class Constants {
 
   static const String databaseName = 'yominexus';
 
+  static String get sentryDsn => String.fromEnvironment(
+        'SENTRY_DSN',
+        defaultValue: '',
+      );
+
   static const String initialRoute = MainView.routeName;
   static final GoRouter router = GoRouter(
     initialLocation: initialRoute,
