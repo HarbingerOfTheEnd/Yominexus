@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yominexus/core/extensions/build_context.dart';
 import 'package:yominexus/core/interfaces.dart';
-import 'package:yominexus/ui/novel/novel_library_view.dart';
+import 'package:yominexus/ui/library/novel/novel_library_view.dart';
 
 class MainView extends ConsumerStatefulWidget {
   const MainView({super.key});
