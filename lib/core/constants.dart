@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:yominexus/ui/library_view.dart';
-import 'package:yominexus/ui/more/settings/appearance_view.dart';
+import 'package:yominexus/ui/more/settings/appearance/appearance_view.dart';
 import 'package:yominexus/ui/more/settings/settings_view.dart';
 
 @immutable
