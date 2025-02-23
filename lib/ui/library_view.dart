@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yominexus/core/extensions/build_context.dart';
 import 'package:yominexus/core/interfaces.dart';
+import 'package:yominexus/ui/library/anime/anime_library_view.dart';
+import 'package:yominexus/ui/library/manga/manga_library_view.dart';
 import 'package:yominexus/ui/library/novel/novel_library_view.dart';
+import 'package:yominexus/ui/more/more_view.dart';
+import 'package:yominexus/ui/updates/update_view.dart';
 
 class LibraryView extends ConsumerStatefulWidget {
   const LibraryView({super.key});
@@ -16,6 +20,10 @@ class LibraryView extends ConsumerStatefulWidget {
 class _MainViewState extends ConsumerState<LibraryView> {
   final List<Widget> _destinations = [
     const NovelLibraryView(),
+    const AnimeLibraryView(),
+    const MangaLibraryView(),
+    const UpdateView(),
+    const MoreView(),
   ];
   int current = 0;
 
@@ -56,8 +64,6 @@ class _MainViewState extends ConsumerState<LibraryView> {
                       (constraints.maxWidth > 1000 ? 0.04 : 0.09),
                   height: context.mediaQuery.size.height,
                   child: NavigationRail(
-                    leading: const Spacer(),
-                    trailing: const Spacer(),
                     backgroundColor:
                         context.theme.colorScheme.primary.withAlpha(20),
                     destinations: _destinations
