@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class MainViewLocation {
+abstract class LibraryViewLocation {
   Icon get icon;
   Icon get iconOutlined;
   String get label;

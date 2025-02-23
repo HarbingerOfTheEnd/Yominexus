@@ -39,9 +39,9 @@ class _MainViewState extends ConsumerState<MainView> {
                   destinations: _destinations
                       .map(
                         (loc) => NavigationDestination(
-                          icon: (loc as MainViewLocation).iconOutlined,
-                          label: (loc as MainViewLocation).label,
-                          selectedIcon: (loc as MainViewLocation).icon,
+                          icon: (loc as LibraryViewLocation).iconOutlined,
+                          label: (loc as LibraryViewLocation).label,
+                          selectedIcon: (loc as LibraryViewLocation).icon,
                         ),
                       )
                       .toList(),
@@ -63,11 +63,11 @@ class _MainViewState extends ConsumerState<MainView> {
                     destinations: _destinations
                         .map(
                           (loc) => NavigationRailDestination(
-                            icon: (loc as MainViewLocation).iconOutlined,
+                            icon: (loc as LibraryViewLocation).iconOutlined,
                             label: Text(
-                              (loc as MainViewLocation).label,
+                              (loc as LibraryViewLocation).label,
                             ),
-                            selectedIcon: (loc as MainViewLocation).icon,
+                            selectedIcon: (loc as LibraryViewLocation).icon,
                           ),
                         )
                         .toList(),
