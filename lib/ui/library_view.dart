@@ -4,8 +4,8 @@ import 'package:yominexus/core/extensions/build_context.dart';
 import 'package:yominexus/core/interfaces.dart';
 import 'package:yominexus/ui/library/novel/novel_library_view.dart';
 
-class MainView extends ConsumerStatefulWidget {
-  const MainView({super.key});
+class LibraryView extends ConsumerStatefulWidget {
+  const LibraryView({super.key});
 
   static const String routeName = '/';
 
@@ -13,7 +13,7 @@ class MainView extends ConsumerStatefulWidget {
   ConsumerState<ConsumerStatefulWidget> createState() => _MainViewState();
 }
 
-class _MainViewState extends ConsumerState<MainView> {
+class _MainViewState extends ConsumerState<LibraryView> {
   final List<Widget> _destinations = [
     const NovelLibraryView(),
   ];

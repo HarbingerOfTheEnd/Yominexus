@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:yominexus/ui/main_view.dart';
+import 'package:yominexus/ui/library_view.dart';
 import 'package:yominexus/ui/more/settings/appearance_view.dart';
 import 'package:yominexus/ui/more/settings/settings_view.dart';
 
@@ -25,7 +25,7 @@ final class Constants {
         defaultValue: '',
       );
 
-  static const String initialRoute = MainView.routeName;
+  static const String initialRoute = LibraryView.routeName;
   static final GoRouter router = GoRouter(
     initialLocation: initialRoute,
     routes: <GoRoute>[
@@ -38,8 +38,8 @@ final class Constants {
         builder: (context, state) => const AppearanceView(),
       ),
       GoRoute(
-        path: MainView.routeName,
-        builder: (context, state) => const MainView(),
+        path: LibraryView.routeName,
+        builder: (context, state) => const LibraryView(),
       ),
     ],
   );
