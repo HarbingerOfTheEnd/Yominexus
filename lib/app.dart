@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:yominexus/core/constants.dart';
 import 'package:yominexus/core/themes/base_color_scheme.dart';
+import 'package:yominexus/l10n/generated/app_localizations.dart';
 import 'package:yominexus/providers/amoled_mode_provider.dart';
 import 'package:yominexus/providers/color_scheme_provider.dart';
 import 'package:yominexus/providers/theme_mode_provider.dart';
