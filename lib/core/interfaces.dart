@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class LibraryViewLocation {
+mixin LibraryViewLocation on Widget {
   Icon get icon;
   Icon get iconOutlined;
   String get label;
