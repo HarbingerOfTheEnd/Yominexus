@@ -44,8 +44,8 @@ class SettingsView extends ConsumerWidget {
                 Icons.palette_outlined,
                 color: context.theme.colorScheme.primary,
               ),
-              onTap: () {
-                context.go(AppearanceView.routeName);
+              onTap: () async {
+                await context.push(AppearanceView.routeName);
               }),
         ],
       ),
