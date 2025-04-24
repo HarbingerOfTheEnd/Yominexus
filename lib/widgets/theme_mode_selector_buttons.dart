@@ -17,49 +17,51 @@ class _ThemeModeSelectorButtonsState
   Widget build(BuildContext context) {
     final ThemeMode themeMode = ref.watch(yominexusThemeModeProvider);
 
-    return SegmentedButton(
-      expandedInsets: EdgeInsets.symmetric(
-        horizontal: context.mediaQuery.size.width * 0.3,
+    return LayoutBuilder(
+      builder: (context, constraints) => SegmentedButton(
+        expandedInsets: EdgeInsets.symmetric(
+          horizontal: constraints.maxWidth * 0.05,
+        ),
+        selectedIcon: Icon(
+          Icons.check,
+          color: context.theme.colorScheme.onPrimary,
+        ),
+        segments: <ButtonSegment<ThemeMode>>[
+          ButtonSegment(
+            value: ThemeMode.system,
+            label: Center(
+              child: Text(
+                context.l10n.systemThemeMode,
+              ),
+            ),
+          ),
+          ButtonSegment(
+            value: ThemeMode.light,
+            label: Center(
+              child: Text(
+                context.l10n.lightThemeMode,
+              ),
+            ),
+          ),
+          ButtonSegment(
+            value: ThemeMode.dark,
+            label: Center(
+              child: Text(
+                context.l10n.darkThemeMode,
+              ),
+            ),
+          ),
+        ],
+        selected: <ThemeMode>{
+          themeMode,
+        },
+        onSelectionChanged: (selected) async {
+          final ThemeMode selectedThemeMode = selected.first;
+          await ref
+              .read(yominexusThemeModeProvider.notifier)
+              .updateThemeMode(selectedThemeMode);
+        },
       ),
-      selectedIcon: Icon(
-        Icons.check,
-        color: context.theme.colorScheme.onPrimary,
-      ),
-      segments: <ButtonSegment<ThemeMode>>[
-        ButtonSegment(
-          value: ThemeMode.system,
-          label: Center(
-            child: Text(
-              context.l10n.systemThemeMode,
-            ),
-          ),
-        ),
-        ButtonSegment(
-          value: ThemeMode.light,
-          label: Center(
-            child: Text(
-              context.l10n.lightThemeMode,
-            ),
-          ),
-        ),
-        ButtonSegment(
-          value: ThemeMode.dark,
-          label: Center(
-            child: Text(
-              context.l10n.darkThemeMode,
-            ),
-          ),
-        ),
-      ],
-      selected: <ThemeMode>{
-        themeMode,
-      },
-      onSelectionChanged: (selected) async {
-        final ThemeMode selectedThemeMode = selected.first;
-        await ref
-            .read(yominexusThemeModeProvider.notifier)
-            .updateThemeMode(selectedThemeMode);
-      },
     );
   }
 }
