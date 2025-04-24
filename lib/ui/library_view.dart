@@ -18,7 +18,7 @@ class LibraryView extends ConsumerStatefulWidget {
 }
 
 class _MainViewState extends ConsumerState<LibraryView> {
-  final List<Widget> _destinations = [
+  final List<LibraryViewLocation> _destinations = [
     const NovelLibraryView(),
     const AnimeLibraryView(),
     const MangaLibraryView(),
@@ -47,9 +47,9 @@ class _MainViewState extends ConsumerState<LibraryView> {
                   destinations: _destinations
                       .map(
                         (loc) => NavigationDestination(
-                          icon: (loc as LibraryViewLocation).iconOutlined,
-                          label: (loc as LibraryViewLocation).label,
-                          selectedIcon: (loc as LibraryViewLocation).icon,
+                          icon: loc.iconOutlined,
+                          label: loc.label,
+                          selectedIcon: loc.icon,
                         ),
                       )
                       .toList(),
@@ -69,11 +69,11 @@ class _MainViewState extends ConsumerState<LibraryView> {
                     destinations: _destinations
                         .map(
                           (loc) => NavigationRailDestination(
-                            icon: (loc as LibraryViewLocation).iconOutlined,
+                            icon: loc.iconOutlined,
                             label: Text(
-                              (loc as LibraryViewLocation).label,
+                              loc.label,
                             ),
-                            selectedIcon: (loc as LibraryViewLocation).icon,
+                            selectedIcon: loc.icon,
                           ),
                         )
                         .toList(),
